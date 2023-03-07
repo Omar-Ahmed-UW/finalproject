@@ -27,7 +27,7 @@ end
 
 count = 0;
 for m = 48001:60000
-    [network, temp] = network.networkForward(T{m, 3:end});
+    [network, temp] = network.networkForward((T{m, 3:end})');
     count = count + isequal(round(temp), transformDigit(T{m, 2}));
 end
 
